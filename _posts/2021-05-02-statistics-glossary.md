@@ -1,6 +1,7 @@
 ## Statistics Glossary
  - Statistics has a lot of terms that are possibly unfamiliar to us at times, and its good to maintain a glossary of the same.
  - I plan to keep updating this as I come across new terms, and the some useful links that explain them well.
+ - Here is a set of [slides](https://docs.google.com/presentation/d/1s5IqiBH-5VudKZjPYLQ5ZA-Q-3KX0X80/edit?usp=drive_link&ouid=105799006995961389148&rtpof=true&sd=true) that I shared in a reading group session, that talk about some of these in more detail.
  - Last Update: Jan 22, 2025
 
 Term | Layman Meaning | Reference
