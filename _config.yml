@@ -1,11 +1,11 @@
-title: "The Inner Mechanic: nuts and bolts and just a little peek."
+title: "Nuts and Bolts"
 author: "Sudhanshu Garg"
 description: "Just figuring out how things work" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 # email: "example@mail.com"
-twitter_username: "sudhan5hu"
+twitter_username: "sud_garg"
 github_username: "sudhanshugarg"
 linkedin_username: "su-garg"
 #facebook_username: username
@@ -18,7 +18,7 @@ linkedin_username: "su-garg"
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
 # https://jekyllrb.com/docs/themes/:
-theme: "jekyll-theme-merlot"
+theme: "jekyll-theme-cayman"
 
 rss: rss
 
@@ -29,7 +29,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-theme-merlot
+  - jekyll-theme-cayman
 
 titles_from_headings:
   strip_title: true
