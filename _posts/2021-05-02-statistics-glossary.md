@@ -1,7 +1,7 @@
 ## Statistics Glossary
  - Statistics has a lot of terms that are possibly unfamiliar to us at times, and its good to maintain a glossary of the same.
  - I plan to keep updating this as I come across new terms, and the some useful links that explain them well.
- - Last Update: May 02, 2021
+ - Last Update: Jan 22, 2025
 
 Term | Layman Meaning | Reference
 -- | -- | --
@@ -30,4 +30,6 @@ Linear Regression |  |
 Logistic Regression |  | 
 Standard Error |  | 
 Gini Coefficient | 0 represents equality among all values, while 1 represents maximum inequality, for e.g. if one of the values has everything, while the other values represent nothing. | [Blog](https://blog.quantinsti.com/gini-index/)
-Decision Tree Classifier | | [Article](https://www.datacamp.com/community/tutorials/decision-tree-classification-python) 
+Decision Tree Classifier | | [Article](https://www.datacamp.com/community/tutorials/decision-tree-classification-python)
+Parametric vs Non Parametric Distributions | |
+Batch Normalization | |
