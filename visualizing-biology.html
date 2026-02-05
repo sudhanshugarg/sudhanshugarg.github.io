@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualizing Biology | My Work & Interests</title>
+
+  <!-- Common styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* Biology page specific gradient */
+    h2::before {
+      background: linear-gradient(to right, #10b981, #3b82f6);
+    }
+
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #10b981;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="distill-header">
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Visualizing Biology</h1>
+      <p class="subtitle">Making the invisible visible through computational tools and creative representations</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <img src="https://picsum.photos/seed/bio-hero/800/400" alt="Biology Visualization Hero" class="hero-image">
+
+    <section>
+      <h2>About This Project</h2>
+      <p>
+        Biology is fundamentally about patterns, processes, and structures that operate at scales from molecules to ecosystems.
+        Many of these phenomena are invisible to the naked eye or occur over timeframes that make direct observation challenging.
+      </p>
+      <p>
+        This collection explores how computational visualization can help us understand biological systems better.
+        Through interactive graphics, animations, and data-driven representations, we can build intuition about complex processes
+        and reveal insights hidden in biological data.
+      </p>
+
+      <div class="callout">
+        <p><strong>Note:</strong> These visualizations are built using modern web technologies and are designed to be interactive.
+        Many use concepts from the Distill.pub template for scientific communication.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Visualizations</h2>
+
+      <div class="visualization-grid">
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/cell/400/200" alt="Cell Processes" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Cellular Processes</h3>
+            <p>Interactive models of protein synthesis, cellular respiration, and signal transduction pathways.</p>
+            <div>
+              <span class="tag">Interactive</span>
+              <span class="tag">Molecular Biology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/genetics/400/200" alt="Gene Expression" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Gene Expression Dynamics</h3>
+            <p>Visualizing how genes turn on and off, with real-time data from RNA-seq experiments.</p>
+            <div>
+              <span class="tag">Data-Driven</span>
+              <span class="tag">Genomics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/ecosystem/400/200" alt="Ecosystem Dynamics" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Ecosystem Dynamics</h3>
+            <p>Simulations of predator-prey relationships, population dynamics, and community interactions.</p>
+            <div>
+              <span class="tag">Simulation</span>
+              <span class="tag">Ecology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/protein/400/200" alt="Protein Folding" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Protein Folding</h3>
+            <p>3D interactive models showing how amino acid sequences fold into functional proteins.</p>
+            <div>
+              <span class="tag">3D</span>
+              <span class="tag">Structural Biology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/neural/400/200" alt="Neural Networks" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Neural Network Activity</h3>
+            <p>Visualizing how neurons fire and communicate, from single cells to brain regions.</p>
+            <div>
+              <span class="tag">Neuroscience</span>
+              <span class="tag">Time-Series</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <img src="https://picsum.photos/seed/evolution/400/200" alt="Evolutionary Trees" class="viz-card-image">
+          <div class="viz-card-content">
+            <h3>Phylogenetic Trees</h3>
+            <p>Interactive evolutionary trees showing relationships between species and genetic divergence.</p>
+            <div>
+              <span class="tag">Evolution</span>
+              <span class="tag">Comparative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Techniques & Tools</h2>
+      <p>
+        These visualizations leverage a variety of modern web technologies and data visualization libraries:
+      </p>
+      <ul>
+        <li><strong>D3.js</strong> - For data-driven interactive graphics</li>
+        <li><strong>Three.js</strong> - For 3D molecular and structural visualizations</li>
+        <li><strong>WebGL</strong> - For high-performance rendering of complex datasets</li>
+        <li><strong>Distill.pub template</strong> - For clean, academic-style presentation</li>
+        <li><strong>Observable</strong> - For reactive, notebook-style explorations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Future Directions</h2>
+      <p>
+        Upcoming visualizations will explore:
+      </p>
+      <ul>
+        <li>CRISPR gene editing mechanisms</li>
+        <li>Immune system response pathways</li>
+        <li>Metabolic network flows</li>
+        <li>Developmental biology timelines</li>
+        <li>Microbiome composition and interactions</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built with inspiration from <a href="https://distill.pub" target="_blank">Distill.pub</a> |
+      <a href="index.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <!-- Common scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

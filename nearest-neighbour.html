@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Quantization for Nearest Neighbour Search | My Work & Interests</title>
+
+  <!-- Common styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="distill-header">
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Product Quantization for Nearest Neighbour Search</h1>
+      <p class="meta">April 29, 2022</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <p>
+        This is a set of slides I presented in a paper reading session,
+        to help understand how we can do nearest neighbour search for embeddings.
+      </p>
+
+      <a href="https://docs.google.com/presentation/d/1P9_nafB6IsT3_cGYXBpOoHtjosvMjmF9/edit#slide=id.p1" target="_blank" class="slides-link">
+        View Presentation Slides →
+      </a>
+
+      <div class="callout">
+        <p>
+          <strong>Key Insight:</strong> Product Quantization enables efficient approximate nearest neighbor search
+          in high-dimensional spaces by decomposing the space into subspaces and quantizing each independently.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul>
+        <li>
+          <a href="https://lear.inrialpes.fr/pubs/2011/JDS11/jegou_searching_with_quantization.pdf" target="_blank">
+            Product Quantization for Nearest Neighbour Search (Original Paper)
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/facebookresearch/faiss" target="_blank">
+            FAISS (Facebook AI Similarity Search) Github repository
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=sKyvsdEv6rk" target="_blank">
+            FAISS Intro Video
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=B7wmo_NImgM" target="_blank">
+            Choosing Indexes for Similarity Search Video
+          </a>
+        </li>
+        <li>
+          <a href="https://courses.cs.ut.ee/MTAT.05.127/2017_spring/uploads/Main/lecture-2.pdf" target="_blank">
+            Quantization Lecture
+          </a>
+        </li>
+        <li>
+          <a href="http://www.lx.it.pt/~mtf/Vector_quantization.pdf" target="_blank">
+            Scalar and Vector Quantization (Mario Figuereido)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.robots.ox.ac.uk/~az/lectures/aims-big_data/relja_big_data_ann_flat.pdf" target="_blank">
+            Approximate Nearest Neighbour Slides (Oxford)
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="index.html">Back to Home</a> |
+        Built with inspiration from <a href="https://distill.pub" target="_blank">Distill.pub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Common scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

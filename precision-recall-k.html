@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precision and Recall @ K for Recommender Systems | My Work & Interests</title>
+
+  <!-- Common styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="distill-header">
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Precision and Recall @ K</h1>
+      <p class="meta">March 2, 2023 | Evaluation of Recommender Systems</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Problem Statement</h2>
+      <p>
+        A common problem in evaluation of recommender systems is to compute
+        the precision@k and recall@k. Here, I discuss the procedure I'm using
+        to compute the precision/recall @k in a topK recommender system.
+      </p>
+
+      <p>
+        Let's say we have N userIds in the ecosystem, and we have a 32
+        floating-point embedding for each userId.
+      </p>
+
+      <p>
+        We would like to compute the precision and recall for a topK
+        recommender system, assuming k = 300.
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>Context:</strong> The system is recommending users who are similar to other users,
+          so user embeddings whose cosine distance with other user embeddings is highest.
+        </p>
+      </div>
+
+      <p>
+        Using brute force, compute the top-300 userIds for each userId.
+        Using hnsw algorithm, compute the top-300 userIds for each userId.
+        Now, we assume that brute force gives us the optimal set of 300
+        recommendations for each userId.
+      </p>
+
+      <p>
+        Note that it's possible to get fewer than 300 recommendations.
+        For example, if we limit the cosine distance to be >= 0.9, we might
+        end up with fewer than 300 users who are similar to the query userId.
+      </p>
+    </section>
+
+    <section>
+      <h2>Solution</h2>
+      <p>
+        We will compute the precision and recall for each userId in the system.
+        Let's set K = 300, and a query userId M. Let's say we have the
+        following different cases, then the precision and recall will be as follows:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Brute Force</th>
+            <th>Recommender Algorithm</th>
+            <th>Common</th>
+            <th>Precision</th>
+            <th>Recall</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5" style="background: #fafafa; font-style: italic;">
+              relevant items | recommended items | recommended items that are relevant | common/recommended | common/relevant
+            </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>300</td>
+            <td>200</td>
+            <td>200/300</td>
+            <td>200/300</td>
+          </tr>
+          <tr>
+            <td>250</td>
+            <td>300</td>
+            <td>200</td>
+            <td>200/300</td>
+            <td>200/250</td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>180</td>
+            <td>160</td>
+            <td>160/180</td>
+            <td>160/300</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Once we compute the precision per userId, we can then just take the
+        average precision and average recall and use that as an evaluation
+        measure of the recommender system.
+      </p>
+    </section>
+
+    <section>
+      <h3>Corner Cases</h3>
+      <ul>
+        <li>
+          In case the number of "relevant" items is 0, a division by zero is
+          possible. In that case, we will use recall as 1.0.
+        </li>
+        <li>
+          In case the number of "recommended" items is 0, a division by
+          zero is possible. In that case, we will use precision as 1.0.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Glossary</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>cosine similarity</td>
+            <td>cosine of the angle between two vectors (or 32-dimensional vectors/embeddings in this case)</td>
+          </tr>
+          <tr>
+            <td>cosine distance</td>
+            <td>1 - cosine similarity</td>
+          </tr>
+          <tr>
+            <td>precision @k</td>
+            <td>Precision at k is the proportion of recommended items in the topK set that are relevant</td>
+          </tr>
+          <tr>
+            <td>recall @k</td>
+            <td>Recall at k is the proportion of relevant items found in the topK recommendations</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul>
+        <li>
+          <a href="https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54" target="_blank">
+            Recall and Precision at K for Recommender Systems (Medium)
+          </a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/questions/33697625/recall-recall-ratek-and-precision-in-top-k-recommendation" target="_blank">
+            Stack Overflow: Recall and Precision in Top-K Recommendation
+          </a>
+        </li>
+        <li>
+          <a href="https://ieeexplore.ieee.org/document/6100061" target="_blank">
+            IEEE Paper on Recommender System Evaluation
+          </a>
+        </li>
+        <li>
+          <a href="https://youtu.be/mpv8iMe24-Q" target="_blank">
+            Video Tutorial 1
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=BD9TkvEsKwM" target="_blank">
+            Video Tutorial 2
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="index.html">Back to Home</a> |
+        Built with inspiration from <a href="https://distill.pub" target="_blank">Distill.pub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Common scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

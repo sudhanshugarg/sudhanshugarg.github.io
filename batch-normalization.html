@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batch Normalization | My Work & Interests</title>
+
+  <!-- Common styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="distill-header">
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Batch Normalization</h1>
+      <p class="meta">December 5, 2022</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <p>
+        Paper Reading: <a href="https://arxiv.org/abs/1502.03167" target="_blank">
+        Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a>
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>Key Insight:</strong> Batch normalization normalizes layer inputs during training,
+          which stabilizes the learning process and enables faster convergence with higher learning rates.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Some Intuition Behind Why Batch Normalization is Useful in Practice</h2>
+      <ul>
+        <li>Reduces training time for a deep learning network</li>
+        <li>Improves gradient flow through the network (helps with vanishing gradient problem)</li>
+        <li>Allows higher learning rates</li>
+        <li>Reduces the strong dependence on initialization</li>
+        <li>Acts as a form of regularization in a funny way, and slightly reduces the need for dropout, maybe</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/1502.03167" target="_blank">
+            Paper: Batch Normalization (Ioffe & Szegedy, 2015)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=wEoyxE0GP2M&t=3257s" target="_blank">
+            cs231n, Stanford, Lecture 6, Fei-Fei Li
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=nUUqwaxLnWs" target="_blank">
+            Why does batch norm work, Andrew Ng
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=5qefnAek8OA" target="_blank">
+            Batch Norm at Test Time, Andrew Ng
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="index.html">Back to Home</a> |
+        Built with inspiration from <a href="https://distill.pub" target="_blank">Distill.pub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Common scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>
