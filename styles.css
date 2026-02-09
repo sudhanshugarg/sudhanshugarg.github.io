@@ -381,6 +381,15 @@ code {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.blog-card-icon {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px;
+  max-height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .blog-card-content {
   padding: 1.5rem;
 }
